@@ -9,11 +9,6 @@
 dotnet new install MDB.Templates --nuget-source https://nuget.pkg.github.com/Zaclin-GIT/index.json
 ```
 
-### From NuGet.org
-```bash
-dotnet new install MDB.Templates
-```
-
 ### From local clone
 ```bash
 git clone https://github.com/Zaclin-GIT/MDB.Templates.git
