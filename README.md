@@ -4,9 +4,9 @@
 
 ## Installation
 
-### From GitHub Packages (recommended)
+### One-liner (recommended)
 ```bash
-dotnet new install MDB.Templates --nuget-source https://nuget.pkg.github.com/Zaclin-GIT/index.json
+dotnet new install https://github.com/Zaclin-GIT/MDB.Templates/releases/latest/download/MDB.Templates.1.0.0.nupkg
 ```
 
 ### From local clone
@@ -26,7 +26,7 @@ dotnet new install ./MDB.Templates
 ### Create a new mod
 
 ```bash
-dotnet new mdbmod -n MyAwesomeMod --game-path "C:\Path\To\Game"
+dotnet new mdbmod -n MyAwesomeMod --GamePath "C:\Path\To\Game"
 ```
 
 ### All options
@@ -38,21 +38,21 @@ dotnet new mdbmod --help
 | Option | Description | Default |
 |--------|-------------|---------|
 | `-n`, `--name` | Project/mod name | `MyMod` |
-| `--author` | Your mod author name | `ModAuthor` |
-| `--description` | Short description of your mod | `An MDB Framework mod` |
-| `--game-path` | Absolute path to the game folder | *(must be set)* |
+| `--ModAuthor` | Your mod author name | `ModAuthor` |
+| `--ModDescription` | Short description of your mod | `An MDB Framework mod` |
+| `--GamePath` | Absolute path to the game folder | *(must be set)* |
 | `--imgui` | Include ImGui UI boilerplate | `true` |
 
 ### Examples
 
 **Basic mod with ImGui window:**
 ```bash
-dotnet new mdbmod -n HealthDisplay --author "MyName" --game-path "C:\Games\MyGame"
+dotnet new mdbmod -n HealthDisplay --ModAuthor "MyName" --GamePath "C:\Games\MyGame"
 ```
 
 **Headless mod (no ImGui):**
 ```bash
-dotnet new mdbmod -n AutoFarm --author "MyName" --game-path "C:\Games\MyGame" --imgui false
+dotnet new mdbmod -n AutoFarm --ModAuthor "MyName" --GamePath "C:\Games\MyGame" --imgui false
 ```
 
 ### After creating
@@ -82,19 +82,18 @@ dotnet new mdbmod -n AutoFarm --author "MyName" --game-path "C:\Games\MyGame" --
 dotnet new uninstall MDB.Templates
 ```
 
-## Publishing to NuGet
+## Publishing
 
 Publishing happens automatically via GitHub Actions when you create a release.
 
 1. **Tag & release:** Create a GitHub release with a tag like `v1.0.0`
-2. The workflow will pack and push to **GitHub Packages** automatically
-3. To also push to **NuGet.org**, set the repository variable `PUSH_TO_NUGET` to `true` and add a `NUGET_API_KEY` secret
+2. The workflow will pack and attach the `.nupkg` to the release automatically
 
 ### Manual publish
 ```bash
 dotnet pack -c Release
-dotnet nuget push bin\Release\MDB.Templates.1.0.0.nupkg --api-key YOUR_KEY --source https://api.nuget.org/v3/index.json
 ```
+Then upload `bin\Release\MDB.Templates.<version>.nupkg` to your GitHub release.
 
 ## License
 
