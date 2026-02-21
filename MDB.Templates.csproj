@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageId>MDB.Templates</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Title>MDB Framework Mod Templates</Title>
+    <Authors>MDB Framework</Authors>
+    <Description>Project templates for creating mods with MDB Framework (Unity IL2CPP modding).</Description>
+    <PackageTags>dotnet-new;templates;modding;unity;il2cpp;mdb</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Zaclin-GIT/MDB.Templates</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Zaclin-GIT/MDB.Templates</RepositoryUrl>
+
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <!-- Template packages don't produce a real assembly -->
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>

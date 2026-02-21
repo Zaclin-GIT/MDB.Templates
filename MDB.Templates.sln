@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDB.Templates", "MDB.Templates.csproj", "{4908513E-5586-6EBC-DFCE-2E2A7B0244C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{808186BE-9BD0-DD1D-D574-36EEAD1E7F8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mdbmod", "mdbmod", "{189D50C7-D77A-F7B3-FBD0-5900E01D167F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDBModTemplate", "templates\mdbmod\MDBModTemplate.csproj", "{98E3DECD-DB37-3704-0176-C6611D9C218F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4908513E-5586-6EBC-DFCE-2E2A7B0244C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4908513E-5586-6EBC-DFCE-2E2A7B0244C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4908513E-5586-6EBC-DFCE-2E2A7B0244C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4908513E-5586-6EBC-DFCE-2E2A7B0244C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98E3DECD-DB37-3704-0176-C6611D9C218F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98E3DECD-DB37-3704-0176-C6611D9C218F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{189D50C7-D77A-F7B3-FBD0-5900E01D167F} = {808186BE-9BD0-DD1D-D574-36EEAD1E7F8F}
+		{98E3DECD-DB37-3704-0176-C6611D9C218F} = {189D50C7-D77A-F7B3-FBD0-5900E01D167F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F52A2D7-7217-4D99-991F-1DA950D15AD6}
+	EndGlobalSection
+EndGlobal
